@@ -9,14 +9,14 @@ from PIL import Image
 
 
 # Insert project title as header
-st.title('PREDICTION OF SCALE FORMATION BY MODELLING THERMODYNAMIC PROPERTIES USING MACHINE LEARNING')
+st.title('PREDICTION OF SCALE PRECIPITATION BY MODELLING THERMODYNAMIC PROPERTIES USING MACHINE LEARNING')
 st.markdown('Joy Ugoyah')
 
 
 # Data input description
 st.subheader('Input your data in the format described below')
 st.markdown('Please upload an excel file of `.csv` format containing the following parameters in the correct oilfield units as indicated to avoid prediction error.')
-st.markdown('Well No')
+st.markdown('Well No: Well Number')
 st.markdown('Temperature (oF)')
 st.markdown('Pressure (psia)')
 st.markdown('CO2 mole frac.')
