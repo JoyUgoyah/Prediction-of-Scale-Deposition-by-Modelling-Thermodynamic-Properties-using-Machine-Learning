@@ -140,13 +140,12 @@ if uploaded_file is not None:
     st.markdown(' ')
 
     # Add line graph of result
-    """
-    c = alt.Chart(output, title='Scale Monitoring - Prediction').mark_line().encode(
-     x='Well No', y='Condition').properties(width=800, height=300)
+    #c = alt.Chart(output, title='Scale Monitoring - Prediction').mark_line().encode(
+     #x='Well No', y='Condition').properties(width=800, height=300)
 
-    st.altair_chart(c, use_container_width=True)
-    """
     
     well_no_list = output['Well No'].tolist()
     c = alt.Chart(output, title='Scale Monitoring - Prediction').mark_line().encode(
      x=alt.X('Well No', sort=well_no_list), y='Condition').properties(width=800, height=300)
+    
+    st.altair_chart(c, use_container_width=True)
