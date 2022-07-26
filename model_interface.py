@@ -145,7 +145,7 @@ if uploaded_file is not None:
 
     
     well_no_list = output['Well No'].tolist()
-    c = alt.Chart(output, title='Scale Monitoring - Prediction').mark_tick(point=alt.OverlayMarkDef(color="red")).encode(
+    c = alt.Chart(output, title='Scale Monitoring - Prediction').mark_circle(point=alt.OverlayMarkDef(color="red")).encode(
         x=alt.X('Well No', sort=well_no_list), y='Condition').properties(width=800, height=300)
     
     st.altair_chart(c, use_container_width=True)
