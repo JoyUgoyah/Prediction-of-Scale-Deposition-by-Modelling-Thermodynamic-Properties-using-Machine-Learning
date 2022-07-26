@@ -65,7 +65,7 @@ if uploaded_file is not None:
         scale_data.drop('Ba2+', axis=1, inplace=True)
 
         # Missing values imputation
-        scale_data = pd.DataFrame(scale_data.fillna(scale_data.mean()))
+        scale_data = pd.DataFrame(scale_data['TDS'].fillna(scale_data.mean()))
         
 
     
