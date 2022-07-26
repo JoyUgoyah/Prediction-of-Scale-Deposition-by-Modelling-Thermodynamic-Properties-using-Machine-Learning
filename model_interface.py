@@ -106,7 +106,8 @@ if uploaded_file is not None:
     preprocess()  
 
     # Define features
-    X = scale_data.drop(columns=['Well No'], axis=1) 
+    X = scale_data.drop(columns=['Well No'], axis=1)
+    X = scale_data = pd.DataFrame(scale_data['TDS'].fillna(scale_data.mean()))
 
     # Make prediction
     y_pred = predict_batch(model=model, batch_input_features=X) 
